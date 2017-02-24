@@ -50,10 +50,17 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="doneTypingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="3gc-QY-E1s"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oi8-2r-tcc">
                                 <rect key="frame" x="0.0" y="189" width="375" height="478"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yvV-AU-1pY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JeJ-QE-NHb"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfS-qc-Nof">
                                 <rect key="frame" x="304" y="144" width="55" height="21"/>
@@ -75,6 +82,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="fuckGoBackWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I47-qh-Eq9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSH Attendance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPi-6d-gbo">
                                 <rect key="frame" x="87" y="8" width="201" height="32"/>
@@ -110,6 +120,11 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="attendanceCounter" destination="XfS-qc-Nof" id="E0t-lU-qLq"/>
+                        <outlet property="textField" destination="p0k-ZQ-SUk" id="6jy-h7-dlz"/>
+                        <outlet property="theTableView" destination="oi8-2r-tcc" id="4q5-wH-h7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
